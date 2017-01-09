@@ -1,0 +1,35 @@
+<html>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+var fortunes = new Array(
+"You will find a bushel of money",
+"Your smile will tell you what makes you feel good.",
+"Don’t panic",
+"The best year-round temperature is a warm heart and a cool head",
+"It could be better but it’s good enough.",
+"You will find a thing. It may be important",
+"Your reality check about to bounce.",
+"Two days from now, tomorrow will be yesterday.",
+"When chosen for jury duty, tell judge fortune cookie say “guilty!”",
+"Stop eating now. Food poisoning no fun."
+);
+function fortune() {
+num = Math.round( (fortunes.length - 1) * Math.random());
+return fortunes[num];
+}
+</script>
+
+<body class="view">
+<center>
+<form>
+<h1>Please enter your name</h1>
+<input  type=text name=question size=100>
+<input  type=button name=ask value="Enter" onClick="if (this.form.question.value!='') this.form.answer.value=fortune();"><br>
+<h1>Your fortune teller says</h1>
+<input type=text name=answer  size=100 onClick="this.form.question.value= null"><br>
+<button  class="button button1"  onClick="this.form.question.value= null">Refresh</button>
+</form>
+
+</center>
+</body>
+</html>
